@@ -1,0 +1,33 @@
+ /* write a c program to pass 2D array as functions:
+ Testcase-1:
+ Input:
+ Enter a row and col: 2 2
+ ENter array elements:
+ 4 567
+ Output:
+ 4 5
+ 6 7
+*/
+
+
+#include<stdio.h>
+void mat(int a[][10],int r,int c)
+{
+    for(int i=0;i<r;i++)
+    {
+        for(int j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+}
+void main()
+{
+    int a[10][10],r,c;
+    printf("enter the mat size: ");
+    scanf("%d%d",&r,&c);
+    printf("enter the mat element: ");
+    mat(a,r,c);
+}
